@@ -57,7 +57,7 @@ class _DifferentMangoesPageState extends State<DifferentMangoesPage> {
       return;
     }
 
-    final uri = Uri.parse("http://192.168.0.103/farmer_api/upload_mango.php");
+    final uri = Uri.parse("http://192.168.0.150/farmer_api/upload_mango.php");
     var request = http.MultipartRequest('POST', uri);
     request.fields['name'] = _nameController.text;
     request.fields['details'] = _detailsController.text;
@@ -84,7 +84,7 @@ class _DifferentMangoesPageState extends State<DifferentMangoesPage> {
 
   // Fetch mangoes from DB
   Future<void> fetchMangoesFromDB() async {
-    final url = Uri.parse("http://192.168.0.103/farmer_api/get_mangoes.php");
+    final url = Uri.parse("http://192.168.0.150/farmer_api/get_mangoes.php");
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

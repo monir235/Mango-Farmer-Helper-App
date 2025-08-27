@@ -10,7 +10,7 @@ class MarketPricePage extends StatefulWidget {
 }
 
 class _MarketPricePageState extends State<MarketPricePage> {
-  final String apiBaseUrl = "http://192.168.0.103/farmer_api";
+  final String apiBaseUrl = "http://192.168.0.150/farmer_api";
 
   // Updated fetch function to handle wrapped JSON
   Future<List<Map<String, dynamic>>> _fetchMangoPrices() async {
